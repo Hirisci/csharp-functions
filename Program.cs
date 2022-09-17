@@ -37,12 +37,12 @@ int Quadrato(int num)
 
 int[] ElevaArrayAlQuadrato(int[] array)
 {
-    int[] TempArray = new int[array.Length];
-    for (int i = 0; i < array.Length; i++)
+    int[] tempArray = (int[])array.Clone();
+    for (int i = 0; i < tempArray.Length; i++)
     {
-        TempArray[i] = Quadrato(array[i]);
+        tempArray[i] = Quadrato(tempArray[i]);
     }
-    return TempArray;
+    return tempArray;
 }
 
 int sommaElementiArray(int[] array)
